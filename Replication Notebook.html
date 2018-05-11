@@ -11871,7 +11871,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Mind: Equation (A.22) in the paper, which is equation (3) here, has a typo at the second derivative of $g^i$.</p>
+<p>Mind: Equation (A.22) in the paper, which is second ODE here, has a typo at the second derivative of $g^i$.</p>
 
 </div>
 </div>
@@ -11891,7 +11891,7 @@ $$0 = \frac{d\phi^j}{dX_t} \mu_X + \phi^j\big(\mu_Y - r - \pi - \delta_j - \sigm
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Reformulation">Reformulation<a class="anchor-link" href="#Reformulation">&#182;</a></h3><p>It turns out after a great deal of sleuthing, that formulating the system of equations with <b>$g^i$ is much less stable </b> than defining $p^i = \frac{1}{g^i}$ and translating it. The fractions in equation (2) above and the definitions below are substituted with:</p>
+<h3 id="Reformulation">Reformulation<a class="anchor-link" href="#Reformulation">&#182;</a></h3><p>It turns out after a great deal of sleuthing, that formulating the system of equations with <b>$g^i$ is much less stable </b> than defining $p^i = \frac{1}{g^i}$ and translating it. The fractions in second ODE above and the definitions below are substituted with:</p>
 <p>$$\frac{\frac{dg^i}{dX_t}}{g^i} = -\frac{\frac{dp^i}{dX_t}}{p^i}$$</p>
 <p>and</p>
 <p>$$\frac{\frac{d^2g^i}{dX_t^2}}{g^i} = 2\Bigg(\frac{\frac{dp^i}{dX_t}}{p^i}\Bigg)^2-\frac{\frac{d^2p^i}{dX_t^2}}{p^i}$$</p>
@@ -12321,7 +12321,7 @@ $$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Now, the right-hand side of equations (1) for $i\in\{A,B\}$ and equation (2) for $j\in\{1,2\}$ are implemented. The following function takes a stacked candidate solution of the four solution functions evaluated on a grid as input and returns the residual of those four equations.</p>
+<p>Now, the right-hand side of the first ODE for $i\in\{A,B\}$ and second ODE for $j\in\{1,2\}$ are implemented. The following function takes a stacked candidate solution of the four solution functions evaluated on a grid as input and returns the residual of those four equations.</p>
 <p>It carries out the following steps:</p>
 <ol>
 <li>unstack the input into the four functions</li>
